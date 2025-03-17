@@ -1,0 +1,21 @@
+{
+  "entityTypeExtensions": [
+    {
+      "entityType": "AppGlobalStorage",
+      "properties": {
+        "activeProjects": {
+          "type": "string", //plan B
+          "multi": true
+        }
+      }
+    },
+    {
+      "entityType": "Project",
+      "properties": {
+        "toggle": {
+          "type": "string" //plain A
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "name": "intern",
+  "title": "intern",
+  "description": "intern",
+  "$schema": "https://json.schemastore.org/youtrack-app.json",
+  "vendor": {
+    "name": "monov",
+    "url": ""
+  },
+  "icon": "icon.svg",
+  "permissions": {
+    "storage": {}
+  },
+  "widgets": [
+
+    {
+      "key": "intern",
+      "name": "intern",
+      "indexPath": "intern/index.html",
+      "extensionPoint": "MAIN_MENU_ITEM",
+      "iconPath": "intern/widget-icon.svg",
+      "description": "intern"
+    }
+  ]
+}

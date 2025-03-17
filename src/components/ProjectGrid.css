@@ -1,0 +1,124 @@
+.project-grid-container {
+    padding: 16px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+    width: 100%;
+}
+
+.project-card {
+    background-color: var(--ring-content-background-color, #fff);
+    border: 1px solid var(--ring-borders-color, #6f737a);
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.project-card:hover {
+    box-shadow: 0 3px 8px rgb(0, 0, 0);
+    border-color: #fff;
+}
+
+.project-card.active {
+    background-color: rgba(22, 125, 255, 0.05);
+    border-color: var(--ring-main-color, #0f5edb);
+}
+
+.project-card-content {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    gap: 12px;
+}
+
+.project-icon {
+    flex: 0 0 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #f5f5f5;
+}
+
+.project-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.project-icon-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: var(--ring-secondary-color, #737577);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.project-info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-name {
+    font-weight: bold;
+    color: var(--ring-text-color, #1f2326);
+    margin: 0 0 4px;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.project-type {
+    color: var(--ring-secondary-color, #737577);
+    font-size: 12px;
+}
+
+.project-toggle {
+    flex: 0 0 auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .project-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-content {
+        padding: 12px;
+    }
+}
+
+/* Dark theme compatibility */
+html[theme="dark"] .project-card {
+    background-color: var(--ring-content-background-color, #323232);
+    border-color: var(--ring-border-color, #454545);
+}
+
+html[theme="dark"] .project-icon-placeholder {
+    background-color: var(--ring-secondary-color, #737577);
+}
+
+html[theme="dark"] .project-name {
+    color: var(--ring-text-color, #e1e1e1);
+}

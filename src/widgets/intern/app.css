@@ -1,0 +1,59 @@
+.widget {
+  padding: 16px;
+  font-family: var(--ring-font-family, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif);
+}
+
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--ring-border-color, #dfe5eb);
+}
+
+.widget-header h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--ring-text-color, #1f2326);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+}
+
+.empty-state, .error-state {
+  padding: 24px;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px dashed var(--ring-border-color, #dfe5eb);
+}
+
+.empty-state {
+  color: var(--ring-secondary-color, #737577);
+  background-color: var(--ring-content-background-color, #f7f9fa);
+}
+
+.error-state {
+  color: var(--ring-error-color, #db5860);
+  background-color: rgba(219, 88, 96, 0.05);
+  border-color: var(--ring-error-color, #db5860);
+}
+
+/* Dark theme compatibility */
+html[theme="dark"] .widget-header h2 {
+  color: var(--ring-text-color, #e1e1e1);
+}
+
+html[theme="dark"] .empty-state {
+  background-color: var(--ring-content-background-color, #323232);
+  border-color: var(--ring-border-color, #454545);
+}
+
+html[theme="dark"] .error-state {
+  background-color: rgba(219, 88, 96, 0.1);
+}
